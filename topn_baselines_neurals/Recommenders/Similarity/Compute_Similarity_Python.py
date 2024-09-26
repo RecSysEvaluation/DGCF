@@ -2,7 +2,9 @@ import numpy as np
 import time, sys
 import scipy.sparse as sps
 from topn_baselines_neurals.Utils.seconds_to_biggest_unit import seconds_to_biggest_unit
-import topn_baselines_neurals.Recommenders.Recommender_utils as recommender_utils
+from topn_baselines_neurals.Recommenders import Recommender_utils as recommender_utils
+
+
 
 
 class Incremental_Similarity_Builder:

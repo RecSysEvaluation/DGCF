@@ -47,14 +47,16 @@ if __name__ == '__main__':
         os.makedirs(saved_results)
     output_root_path = saved_results+"/"
     recommender_class_list = [
-        Random,
-        TopPop,
         ItemKNNCFRecommender,
         UserKNNCFRecommender,
+        Random,
+        TopPop,
         P3alphaRecommender,
         RP3betaRecommender,
         EASE_R_Recommender
         ]
+    
+    print("Model is runing...")
     evaluator = EvaluatorHoldout(URM_test, [5,10, 20], exclude_seen=True)
     logFile = open(output_root_path + "result_all_algorithms.txt", "a")
     for recommender_class in recommender_class_list:
